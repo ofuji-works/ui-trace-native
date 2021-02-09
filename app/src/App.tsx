@@ -1,33 +1,14 @@
 import React from 'react'
-import {
-  SafeAreaView,
-  StyleSheet,
-  ScrollView,
-  View,
-  Text,
-  StatusBar,
-} from 'react-native'
-import topImage from './images/top-image.jpg'
+import { StatusBar } from 'react-native'
+import AppRouter from './Router'
 
 const App: React.FC = () => {
   return (
     <>
       <StatusBar barStyle="dark-content" />
-      <SafeAreaView>
-        <ScrollView>
-          <View>
-            <Text>Trace Gallery</Text>
-          </View>
-        </ScrollView>
-      </SafeAreaView>
+      <AppRouter />
     </>
-  );
-};
+  )
+}
 
-const styles = StyleSheet.create({
-  // scrollView: {
-  //   backgroundColor: '',
-  // },
-});
-
-export default App;
+export default App
