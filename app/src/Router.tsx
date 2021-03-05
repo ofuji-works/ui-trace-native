@@ -1,6 +1,7 @@
 import React from 'react'
 import { Router, Stack, Scene } from 'react-native-router-flux'
 import Top from './pages/Top'
+import AMusic from './pages/AMusic/index'
 
 interface IScene {
     initial?: boolean
@@ -17,7 +18,13 @@ const scenesParams: IScene[] = [
         title: 'Top',
         component: Top,
         hideNavBar: true
-    }
+    },
+    {
+        key: 'AMusic',
+        title: 'AMusic',
+        component: AMusic,
+        hideNavBar: true
+    },
 ]
 
 const Scenes = scenesParams.map((params) => (<Scene {...params} />))

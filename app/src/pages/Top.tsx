@@ -5,9 +5,11 @@ import {
     View,
     Text,
     Image,
-    SafeAreaView
+    SafeAreaView,
+    TouchableOpacity
 } from 'react-native'
 import topImage from '../images/top-image.jpg'
+import { Actions } from 'react-native-router-flux'
 
 const Top: React.FC = () => {
   return (
@@ -18,9 +20,9 @@ const Top: React.FC = () => {
                 <Text style={styles.topMainText}>Trace Gallery</Text>
             </View>
             <View style={styles.cardsBlock}>
-                <View style={styles.card}>
+              <TouchableOpacity style={styles.card} onPress={Actions.AMusic}>
                 <Text style={styles.cardTitle}>title</Text>
-                </View>
+              </TouchableOpacity>
             </View>
         </ScrollView>
       </SafeAreaView>
